@@ -1,0 +1,42 @@
+body {
+  background-color: grey;
+  color: lightblue ;
+}
+
+header {
+  background-color: black;
+  display: block;
+  padding-left: 550px;
+}
+
+
+
+
+
+ 
+ li {
+   border: 1px solid black;
+   height: 300;
+   width: 200;
+   color: lightblue;
+   font-size: 18px;
+   font: bold;
+
+
+ }
+
+div {
+  height: 400px;
+  width: 200px;
+  display: inline-block;
+  padding-left: 100px;
+}
+
+h4 {
+  color: black;
+  font-size: 24px;
+  font: bold, black;
+  background-color: salmon;
+  font-family: cursive;
+  padding-left: 75px;
+}

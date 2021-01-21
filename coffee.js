@@ -164,7 +164,12 @@ for (var i =0; i < hours.length; i ++) {
   
   var limaHeader = document.getElementById("lima-header")
   limaHeader.innerText = "Lima:"
+
+  var limaTotalSales = document.createElement('li')
+limaTotalSales.innerText = 'Total: ' + lima.totalCookieSales
+unorderedList.appendChild(limaTotalSales)
   
+ 
 
 ////
 
@@ -181,6 +186,10 @@ for (var i =0; i < hours.length; i ++) {
   var parisHeader = document.getElementById('paris-header')
   parisHeader.innerText = 'Paris:'
 
+  var parisTotalSales = document.createElement('li')
+parisTotalSales.innerText = 'Total: ' + paris.totalCookieSales
+unorderedListThree.appendChild(parisTotalSales)
+
 
   ///
 var dubaiList = document.getElementById("store-list3")
@@ -195,6 +204,10 @@ for (var i =0; i < hours.length; i ++) {
   dubaiList.appendChild(unorderedListTwo)
   var dubaiHeader = document.getElementById('dubai-header')
   dubaiHeader.innerText = 'Dubai:'
+
+  var dubaiTotalSales = document.createElement('li')
+dubaiTotalSales.innerText = 'Total: ' + dubai.totalCookieSales
+unorderedListTwo.appendChild(dubaiTotalSales)
 
 
   ///
@@ -212,6 +225,10 @@ for (var i =0; i < hours.length; i ++) {
   var tokyoHeader = document.getElementById('tokyo-header')
   tokyoHeader.innerText = 'Tokyo:'
 
+  var tokyoTotalSales = document.createElement('li')
+  tokyoTotalSales.innerText = 'Total: ' + tokyo.totalCookieSales
+  unorderedListFour.appendChild(tokyoTotalSales)
+
 
   ///
 
@@ -228,3 +245,8 @@ for (var i =0; i < hours.length; i ++) {
   var seattleHeader = document.getElementById('seattle-header')
   seattleHeader.innerText = 'Seattle:'
 
+///
+
+var seattleTotalSales = document.createElement('li')
+seattleTotalSales.innerText = 'Total: ' + seattle.totalCookieSales
+unorderedListFive.appendChild(seattleTotalSales)
