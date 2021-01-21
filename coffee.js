@@ -151,5 +151,80 @@ for (var i =0; i < hours.length; i ++) {
  }
 
  
+ var storeList = document.getElementById("store-list")
+ var unorderedList = document.createElement('ul')
 
+for (var i =0; i < hours.length; i ++) {
+  var listItem = document.createElement('li')
+  listItem.innerText = hours[i] + ":" + lima.cookiesPerHour[i]
+  unorderedList.appendChild(listItem)
+}
+
+  storeList.appendChild(unorderedList)
+  
+  var limaHeader = document.getElementById("lima-header")
+  limaHeader.innerText = "Lima:"
+  
+
+////
+
+var parisList = document.getElementById("store-list2")
+var unorderedListThree = document.createElement('ul')
+
+for (var i =0; i < hours.length; i ++) {
+  var listItem2 = document.createElement('li')
+  listItem2.innerText = hours[i] + ":" + paris.cookiesPerHour[i]
+  unorderedListThree.appendChild(listItem2)
+}
+
+  parisList.appendChild(unorderedListThree)
+  var parisHeader = document.getElementById('paris-header')
+  parisHeader.innerText = 'Paris:'
+
+
+  ///
+var dubaiList = document.getElementById("store-list3")
+var unorderedListTwo = document.createElement('ul')
+
+for (var i =0; i < hours.length; i ++) {
+  var listItem3 = document.createElement('li')
+  listItem3.innerText = hours[i] + ":" + dubai.cookiesPerHour[i]
+  unorderedListTwo.appendChild(listItem3)
+}
+
+  dubaiList.appendChild(unorderedListTwo)
+  var dubaiHeader = document.getElementById('dubai-header')
+  dubaiHeader.innerText = 'Dubai:'
+
+
+  ///
+
+var tokyoList = document.getElementById("store-list4")
+var unorderedListFour = document.createElement('ul')
+
+for (var i =0; i < hours.length; i ++) {
+  var listItem4 = document.createElement('li')
+  listItem4.innerText = hours[i] + ":" + tokyo.cookiesPerHour[i]
+  unorderedListFour.appendChild(listItem4)
+}
+
+  tokyoList.appendChild(unorderedListFour)
+  var tokyoHeader = document.getElementById('tokyo-header')
+  tokyoHeader.innerText = 'Tokyo:'
+
+
+  ///
+
+var seattleList = document.getElementById("store-list5")
+var unorderedListFive = document.createElement('ul')
+
+for (var i =0; i < hours.length; i ++) {
+  var listItem5 = document.createElement('li')
+  listItem5.innerText = hours[i] + ":" + seattle.cookiesPerHour[i]
+  unorderedListFive.appendChild(listItem5)
+}
+
+  seattleList.appendChild(unorderedListFive)
+  var seattleHeader = document.getElementById('seattle-header')
+  seattleHeader.innerText = 'Seattle:'
 
