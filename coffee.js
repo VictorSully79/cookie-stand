@@ -1,6 +1,6 @@
 'use strict';
 
-var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+ /* var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 var seattle = {
   location: "Seattle",
@@ -133,14 +133,14 @@ var lima = {
   cookiesPerHour: [],
   totalCookieSales: 0,
   
-  generateSales: function() {
+     generateSales: function() {
     
     var randomSales = Math.floor((Math.random() * ((this.maxCust - this.minCust)+1) + this.minCust));
     console.log('this is randomSales ' + randomSales);
     var estimatedSales = Math.round(randomSales * this.avgCookie);
     console.log('this is estimatedSales ' + estimatedSales);
     
-    return estimatedSales;
+    return estimatedSales; 
   }, 
 }
 
@@ -250,3 +250,119 @@ for (var i =0; i < hours.length; i ++) {
 var seattleTotalSales = document.createElement('li')
 seattleTotalSales.innerText = 'Total: ' + seattle.totalCookieSales
 unorderedListFive.appendChild(seattleTotalSales)
+ */
+
+var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+var stores =[]
+
+function CookieStore(locationName, minCust, maxCust, avgCookie, hours, cookiesPerHour, totalCookieSales ) {
+
+  this.name = locationName;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookie = avgCookie;
+  this.hours = hours;
+  this.cookiesPerHour = cookiesPerHour;
+  this.totalCookieSales = totalCookieSales;
+  
+};
+    console.log(storeHours)
+var Seattle = new CookieStore('Seattle', 23, 65, 6.3, storeHours, 1, 1);
+
+var Lima = new CookieStore('Lima', 23, 65, 6.3, storeHours, 1, 1);
+console.log(Lima)
+//var paris = new CookieStore('Paris', 23, 65, 6.3, storeHours, 1, 1); 
+
+
+
+  
+
+
+
+
+ 
+
+
+CookieStore.prototype.generateCookiesPerHour = function () {
+ 
+  for (var i = 0; i < 13; i++) {
+  //  var cookieSales = this.generateCookiesAtHour();
+  
+    //this.totalCookieSales = this.totalCookieSales + cookieSales;
+    //this.cookiesPerHour.push(cookieSales); 
+  }
+  console.log(Seattle)
+}
+ 
+CookieStore.prototype.generateCookiesAtHour = function () {
+    //return Math.floor(generateStoreCustomers(this.minCust, this.maxCust) * this.avgCookie);
+
+};
+
+//CookieStore.prototype.displayTable = () => {
+  var seattleDiv = document.getElementById('store-list5'); 
+  
+  var rowElement = document.createElement('tr');
+  var nameElement = document.createElement('td');
+  nameElement.textContent = `${Seattle.name} minCust: ${Seattle.minCust} maxCust: ${Seattle.maxCust} ${Seattle.avgCookie}`;
+  rowElement.appendChild(nameElement);
+  console.log(CookieStore, 'cookiestore')
+
+  /* for (var i = 0; i < this.cookiesPerHour.length; i++) {
+    var cellElement = document.createElement('td');
+    cellElement.textContent = `${this.cookiesPerHour[i]}`;
+    rowElement.appendChild(totalElement);
+
+    tableElement.appendChild(rowElement);
+  
+  } */
+  seattleDiv.appendChild(rowElement);
+
+//};
+//displayTable();
+ /*  function createHeader() {
+    console.log(CookieStore.Seattle, 'store seattle');
+    var seattleDiv = document.getElementById('store-list5'); 
+  
+    var rowElement = document.createElement('tr');
+    var nameElement = document.createElement('td');
+    nameElement.textContent = this.name;
+    rowElement.appendChild(nameElement);
+    console.log(this.name)
+
+ for (var i = 0; i < this.cookiesPerHour.length; i++) {
+   var cellElement = document.createElement('td');
+   cellElement.textContent = `${this.cookiesPerHour[i]}`;
+   rowElement.appendChild(totalElement);
+
+   tableElement.appendChild(rowElement);
+ 
+ }
+ seattleDiv.appendChild(tableElement);
+
+    ///??????????///
+  };
+createHeader(); */
+
+  function createFooter() {
+    var totalOfTotals = 0;
+    var hourlyTotal = 0;
+    for (var i = 0; i < hours.length; i++) {
+
+      for (var j = 0; j < stores.length; j++) {
+
+        hourlyTotal += stores[j].cookiesPerHour[i];
+        totalOfTotals += stores[j].cookiesPerHour[i];
+      }
+    }
+
+  };
+
+  
+  
+  
+
+  stores.push(Seattle);
+  
+   CookieStore.prototype.generateCookiesAtHour();
+  CookieStore.prototype.generateCookiesPerHour(); 
